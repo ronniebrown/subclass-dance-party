@@ -1,6 +1,6 @@
 var makeBreakDancer = function(top, left, timeBetweenSteps){
-  makeDancer.call(this);
-  this.$node = $('<span class="break-dancer"></span>');
+  makeDancer.call(this, top, left, timeBetweenSteps);
+  // this.$node = $('<span class="break-dancer"></span>');
   // this.top = Math.random() * 30000;
   // this.left = Math.random() * 15000;
   // this.timeBetweenSteps = 1000;
@@ -9,7 +9,7 @@ var makeBreakDancer = function(top, left, timeBetweenSteps){
   console.log(this.$node);
 };
 
-makeBreakDancer.prototype = Object.create(makeBreakDancer.prototype);
+makeBreakDancer.prototype = Object.create(makeDancer.prototype);
 
 makeBreakDancer.prototype.constructor = makeBreakDancer;
 
