@@ -3,6 +3,9 @@ var makeBreakDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="break-dancer"></span>');
   // this.top = Math.random() * 30000;
   // this.left = Math.random() * 15000;
+
+//*****-----------add jquery animation to step function-----------*******
+  
   // this.timeBetweenSteps = 1000;
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
@@ -20,11 +23,22 @@ makeBreakDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
+  $(".break-dancer").mouseover(function(){
+    $(".break-dancer").css("border", "50px solid green");
+  });
 };
 
 makeBreakDancer.prototype.setPosition = function(top, left){
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
+  // if (window.dancers.length > 0){ 
+  //   var recent = window.dancers[window.dancers.length -1];
+  //   Math.sqrt(
+  //           Math.pow(aPosition.x - bPosition.x, 2) + 
+  //           Math.pow(aPosition.y - bPosition.y, 2) 
+  //       );
+  //   }
+
   var styleSettings = {
     top: top,
     left: left

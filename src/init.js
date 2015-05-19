@@ -27,16 +27,37 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+
+    //make a dancer with a determined position
+
+
+    // var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
+
+    // var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    // var pythDancer = new dancerMakerFunction(
+    //   $("body").height() * Math.random(),
+    //   $("body").width() * Math.random(),
+    //   Math.random() * 1000
+    // );
+
+    /////
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
 
-  // $(".lineUpButton").on("click", function(event) {
-  //   for (var i = 0; i < window.dancers.length; i++){
-  //     // set .left on all elements
-  //     window.dancers[i].left = 500;
-  //   }
-  // }
+  $(".lineUpButton").on("click", function(){
+    $(".dancer").css("left", 0);
+    $(".break-dancer").css("left", 0);
+    $(".worm-dancer").css("left", 0);
+    $(".blinky-dancer").css("left", 0);
+  });
+
+
+  $(".jungleFloor").on("click", function(){
+    $("body").css("background-image", "url(http://cdn2.stocksy.com/a/Wy3000/z0/15284.jpg)");
+    $("body").append("<div class='jungleFloor'><h1>Break it dowwwwwnnnn</h1></div>");
+  });
 
 });
 
