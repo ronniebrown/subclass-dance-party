@@ -30,10 +30,10 @@ body, a:link, a:visited, a:active{
 .worm-dancer {
   border:5px solid green;
   border-radius:10px;
-  position:absolute;
+  
 }
 .break-dancer{
   border:50px solid orange;
   border-radius:25px;
-  position:absolute;
+  
 }

@@ -1,6 +1,6 @@
 var makeBreakDancer = function(top, left, timeBetweenSteps){
   makeDancer.call(this, top, left, timeBetweenSteps);
-  // this.$node = $('<span class="break-dancer"></span>');
+  this.$node = $('<span class="break-dancer"></span>');
   // this.top = Math.random() * 30000;
   // this.left = Math.random() * 15000;
   // this.timeBetweenSteps = 1000;
