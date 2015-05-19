@@ -1,12 +1,12 @@
 var makeBreakDancer = function(top, left, timeBetweenSteps){
-  makeDancer.call(this, top, left, timeBetweenSteps);
+  makeDancer.call(this, timeBetweenSteps);
   this.$node = $('<span class="break-dancer"></span>');
   // this.top = Math.random() * 30000;
   // this.left = Math.random() * 15000;
   // this.timeBetweenSteps = 1000;
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
-  console.log(this.$node);
+  this.setPosition(top, left);
 };
 
 makeBreakDancer.prototype = Object.create(makeDancer.prototype);
@@ -20,4 +20,14 @@ makeBreakDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
+};
+
+makeBreakDancer.prototype.setPosition = function(top, left){
+  // Use css top and left properties to position our <span> tag
+  // where it belongs on the page. See http://api.jquery.com/css/
+  var styleSettings = {
+    top: top,
+    left: left
+  };
+  this.$node.css(styleSettings);
 };
