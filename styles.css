@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
-  background-image: url(http://cdn0.stocksy.com/a/1SR000/z0/105525.jpg);
+  background-image: url(https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DB76C7C65B.jpg);
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -15,29 +15,39 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
-.topbar{
+.topbar {
   height:32px;
-  background-color: #555;
-  font-family: sans-serif;
+  background-color: #6190C1;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  text-shadow: 4px 4px 4px #00000;
 }
 .title{
-  background-color: #777;
+  background-color: #6190C1;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border:30px solid red;
+  border-radius:100px 50px;
   position:absolute;
 }
 .worm-dancer {
-  border:25px solid green;
+  border:60px solid green;
   border-radius:10px;
   position: absolute;
-  
 }
+
 .break-dancer{
-  border:50px solid orange;
+  border:75px solid orange;
   border-radius:25px;
-  position: absolute;
+  position: relative;
+}
+
+.makeGif {
+  width: 250;
+  height: 250;
+
+/*  border:75px;
+  border-radius:25px;*/
 }
 
 .jungleMode {
@@ -50,3 +60,5 @@ h1 {
   font-family: Helvetica;
   color: white;
 }
+
+
