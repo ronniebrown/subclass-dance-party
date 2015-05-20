@@ -18,6 +18,7 @@ body, a:link, a:visited, a:active{
 .topbar{
   height:32px;
   background-color: #555;
+  font-family: sans-serif;
 }
 .title{
   background-color: #777;
@@ -28,7 +29,7 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .worm-dancer {
-  border:5px solid green;
+  border:25px solid green;
   border-radius:10px;
   position: absolute;
   
@@ -40,8 +41,7 @@ body, a:link, a:visited, a:active{
 }
 
 .jungleMode {
-  animation-duration: 3s;
-  animation-name: slidein;
+  transition-timing-function: linear;
 }
 
 h1 {
@@ -49,58 +49,4 @@ h1 {
   margin-top: 200px;
   font-family: Helvetica;
   color: white;
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-
-.slidein {
-  -moz-animation-duration: 3s;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -moz-animation-name: slidein;
-  -webkit-animation-name: slidein;
-  animation-name: slidein;
-  -moz-animation-iteration-count: 3;
-  -webkit-animation-iteration-count: 3;
-  animation-iteration-count: 3;
-  -moz-animation-direction: alternate;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-}
-    
-@-moz-keyframes slidein {
-  from {
-    margin-left:100%;
-    width:300%
-  }
-      
-  to {
-    margin-left:0%;
-    width:100%;
-  }
-}
-
-@-webkit-keyframes slidein {
-  from {
-    margin-left:100%;
-    width:300%
-  }
-  
-  to {
-   margin-left:0%;
-   width:100%;
- }
-}
-
-@keyframes slidein {
-  from {
-    margin-left:100%;
-    width:300%
-  }
-  
-  to {
-   margin-left:0%;
-   width:100%;
- }
 }

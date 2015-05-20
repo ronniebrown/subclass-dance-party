@@ -2,19 +2,6 @@ $(document).ready(function(){
   window.dancers = [];
   
   $(".addDancerButton").on("click", function(event){
-    /* This function sets up the click handlers for the create-dancer
-     * buttons on index.html. You should only need to make one small change to it.
-     * As long as the "data-dancer-maker-function-name" attribute of a
-     * class="addDancerButton" DOM node matches one of the names of the
-     * maker functions available in the global scope, clicking that node
-     * will call the function to make the dancer.
-     */
-
-    /* dancerMakerFunctionName is a string which must match
-     * one of the dancer maker functions available in global scope.
-     * A new object of the given type will be created and added
-     * to the stage.
-     */ 
 
     var dancerMakerFunctionName = $(this).data("dancer-maker-function-name");
 
@@ -42,7 +29,7 @@ $(document).ready(function(){
     // );
 
     /////
-    $('body').append(dancer.$node);
+  $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
 
@@ -57,6 +44,14 @@ $(document).ready(function(){
   $(".jungleFloor").on("click", function(){
     $("body").css("background-image", "url(http://cdn2.stocksy.com/a/Wy3000/z0/15284.jpg)");
     $("body").append("<div class='jungleFloor'><h1>Break it dowwwwwnnnn</h1></div>");
+  });
+
+  $(".boogie").on("click", function () {
+    $('.break-dancer').fadeOut(2500, function() {
+    $(".break-dancer").css("border", "75px solid red");
+    $(".break-dancer").css("border-radius", "150px 25px 50px 25px");
+    $(".boogie").attr('value','fadeOut() is now Complete');
+    });
   });
 
 });
